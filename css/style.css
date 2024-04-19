@@ -1,9 +1,20 @@
 @import "../css/normalize.css";
 @import "../css/fonts.css";
 
+:root {
+  --primary-green: #009379;
+  --primary-white: #ffffff;
+  --text-color: #2d2d2d;
+  --background-color: #f8f9ff;
+  --card-price-color: #3b3b3b;
+  --border-card-color: #d8d8d8;
+  --btn-background-color: #e5f4f2;
+}
+
 body {
-  background: #f8f9ff;
-  color: #000000;
+  font-family: "Mulish", sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 * {
@@ -28,7 +39,6 @@ p {
 
 .plan-title {
   font-family: "Poppins", sans-serif;
-
   font-weight: 700;
   font-size: 38px;
   line-height: 130%;
@@ -38,13 +48,10 @@ p {
 }
 
 .plan-subtitle {
-  font-family: "Mulish", sans-serif;
-
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
   text-align: center;
-  color: #2d2d2d;
   margin-bottom: 60px;
 }
 
@@ -53,13 +60,12 @@ p {
   justify-content: space-around;
 }
 
-
 /* card */
 .plan-card {
   width: 370px;
   min-height: 424px;
-  background: #ffffff;
-  border: 1px solid #d8d8d8;
+  background: var(--primary-white);
+  border: 1px solid var(--border-card-color);
   box-shadow: 34.8541px 29.626px 48.34px rgba(51, 102, 255, 0.05);
   border-radius: 8px;
   position: relative;
@@ -67,67 +73,54 @@ p {
 }
 
 .plan-card:hover {
-  background-color: #009379;
-  color: #fff;
+  background-color: var(--primary-green);
+  color: var(--primary-white);
 }
 
 .plan-card:hover * {
-  color: #fff;
+  color: var(--primary-white);
 }
 
 .plan-card:hover svg path {
-  stroke: #ffffff;
+  stroke: var(--primary-white);
 }
 
 .card-tariff {
-  font-family: "Mulish", sans-serif;
-
   font-weight: 400;
   font-size: 21px;
   line-height: 150%;
   margin-bottom: 12px;
-  color: #2d2d2d;
 }
 
 .card-price {
-  font-family: "Mulish", sans-serif;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 160%;
-  color: #3b3b3b;
+  color: var(--card-price-color);
   margin-bottom: 12px;
 }
 
 .card-price strong {
   font-family: "Poppins", sans-serif;
-
   font-weight: 700;
   font-size: 50px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  color: #2d2d2d;
   margin-right: 4px;
 }
 
 .card-text {
-  font-family: "Mulish", sans-serif;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   margin-bottom: 24px;
-  color: #2d2d2d;
 }
 
 .card-block {
-  font-family: "Mulish", sans-serif;
-
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 16px;
   line-height: 130%;
-  color: #2d2d2d;
 }
 
 .advantages {
@@ -135,10 +128,8 @@ p {
   flex-direction: column;
   justify-content: space-around;
   min-height: 130px;
-
   margin-bottom: 33px;
 }
-
 
 /* button */
 .btn {
@@ -146,13 +137,12 @@ p {
   cursor: pointer;
   border: 1px solid transparent;
   font-family: "Poppins", sans-serif;
-
   font-weight: 600;
   font-size: 16px;
   border-radius: 8px;
   outline: none;
-  background: #e5f4f2;
-  color: #009379;
+  background: var(--btn-background-color);
+  color: var(--primary-green);
   width: 100%;
 }
 
@@ -162,17 +152,45 @@ p {
 }
 
 .btn:hover {
-  background-color: #fff;
-  border-color: #009379;
-  color: #009379;
+  background-color: var(--primary-white);
+  border-color: var(--primary-green);
+  color: var(--primary-green);
 }
 
 .plan-card:hover .btn {
-  background-color: #fff;
-  border-color: #009379;
-  color: #009379;
+  background-color: var(--primary-white);
+  border-color: var(--primary-green);
+  color: var(--primary-green);
 }
 
 .plan-card:hover .btn svg path {
-  stroke: #009379;
+  stroke: var(--primary-green);
+}
+
+/* skeleton */
+.skeleton {
+  position: relative;
+}
+
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background-size: 200%;
+  animation: skeleton 2s infinite reverse;
+  z-index: 1;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
 }
