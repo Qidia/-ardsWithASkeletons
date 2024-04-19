@@ -1,0 +1,178 @@
+@import "../css/normalize.css";
+@import "../css/fonts.css";
+
+body {
+  background: #f8f9ff;
+  color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.plan {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.plan-title {
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.plan-subtitle {
+  font-family: "Mulish", sans-serif;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  color: #2d2d2d;
+  margin-bottom: 60px;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* card */
+.plan-card {
+  width: 370px;
+  min-height: 424px;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  box-shadow: 34.8541px 29.626px 48.34px rgba(51, 102, 255, 0.05);
+  border-radius: 8px;
+  position: relative;
+  padding: 40px 30px;
+}
+
+.plan-card:hover {
+  background-color: #009379;
+  color: #fff;
+}
+
+.plan-card:hover * {
+  color: #fff;
+}
+
+.plan-card:hover svg path {
+  stroke: #ffffff;
+}
+
+.card-tariff {
+  font-family: "Mulish", sans-serif;
+
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 150%;
+  margin-bottom: 12px;
+  color: #2d2d2d;
+}
+
+.card-price {
+  font-family: "Mulish", sans-serif;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: #3b3b3b;
+  margin-bottom: 12px;
+}
+
+.card-price strong {
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: #2d2d2d;
+  margin-right: 4px;
+}
+
+.card-text {
+  font-family: "Mulish", sans-serif;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 24px;
+  color: #2d2d2d;
+}
+
+.card-block {
+  font-family: "Mulish", sans-serif;
+
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2d2d2d;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 130px;
+
+  margin-bottom: 33px;
+}
+
+
+/* button */
+.btn {
+  padding: 12px 24px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  background: #e5f4f2;
+  color: #009379;
+  width: 100%;
+}
+
+.btn svg {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border-color: #009379;
+  color: #009379;
+}
+
+.plan-card:hover .btn {
+  background-color: #fff;
+  border-color: #009379;
+  color: #009379;
+}
+
+.plan-card:hover .btn svg path {
+  stroke: #009379;
+}
